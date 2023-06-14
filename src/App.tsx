@@ -23,7 +23,7 @@ function App() {
     if (!isLoading) {
       alert(dogBreed);
     }
-  }, [imageUrl]);
+  }, [imageUrl, isLoading]);
 
   if (isLoading) {
     return (
