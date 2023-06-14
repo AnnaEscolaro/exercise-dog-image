@@ -16,6 +16,15 @@ function App() {
     dogData();
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('image', imageUrl);
+    const dogUrl = imageUrl.split('/');
+    const dogBreed = dogUrl[4];
+    if (!isLoading) {
+      alert(dogBreed);
+    }
+  }, [imageUrl]);
+
   if (isLoading) {
     return (
       <h1>Loading...</h1>
